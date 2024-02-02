@@ -4,7 +4,7 @@
  * @tree: Root of the tree
  * Return: Number of leaves in the tree or 0 otherwise
  */
-size_t binary_tree_leaves(binary_tree_t *tree)
+size_t binary_tree_leaves(const binary_tree_t *tree)
 {
 	int leaves = 0;
 
