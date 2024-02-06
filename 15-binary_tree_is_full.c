@@ -4,7 +4,7 @@
  * binary_tree_is_full - Check wheater a binary tree is full or not
  * @tree: Pointer to the root of the tree
  * Return: 1 if the tree full 0 otherwise
-/* Function to check if a binary tree is full */
+ */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
 	if (tree == NULL)
