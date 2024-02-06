@@ -24,13 +24,13 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 /**
  * binary_tree_nodes - Clac the number of nodes that has at least 1 chiled
  * @tree: Root of the tree
- * Return: Number of node that has at least 1 child node or 0 otherwise
+ * Return: Number of all nudes in the tree
  */
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
 	size_t nodes = 0;
 
-	if (tree == NULL || (tree->left == NULL && tree->right == NULL))
+	if (tree == NULL)
 		return (0);
 
 	nodes += binary_tree_nodes(tree->left);
