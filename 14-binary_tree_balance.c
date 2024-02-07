@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+#include <stdio.h>
 /**
  * is_bigger - compare tow nubers
  * @a: First number
@@ -7,7 +8,7 @@
 */
 size_t is_bigger(size_t a, size_t b)
 {
-	return (a < b ? a : b);
+	return (a > b ? a : b);
 }
 
 /**
@@ -23,8 +24,9 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
-	right_nodes = binary_tree_height(tree->right);
-	left_nodes = binary_tree_height(tree->left);
+	printf("node_NUmber[%d]\n", tree->n);
+	left_nodes += binary_tree_height(tree->left);
+	right_nodes += binary_tree_height(tree->right);
 
 	return (is_bigger(right_nodes + 1, left_nodes + 1));
 
@@ -39,5 +41,7 @@ int binary_tree_balance(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
+	printf("left_hight[%ld]\n", binary_tree_height(tree->left));
+	printf("right_hight[%ld]\n", binary_tree_height(tree->right));
 	return (binary_tree_height(tree->left) - binary_tree_height(tree->right));
 }
